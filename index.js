@@ -1,20 +1,26 @@
-function generateQRcode() {
-    let website = document.getElementById('website').value;
-    console.log("Website entered:", website); // Logs the URL entered
+let hourspan=document.getElementById('hour')
+let minutespan=document.getElementById('minute')
+let secondspan=document.getElementById('second')
+let amorpmspan=document.getElementById('amorpm')
 
-    if (website) {
-        let qrcode = document.getElementById('qrcode');
-        qrcode.innerHTML = ""; // Clear any previous QR code
+function ChangeTime(){
+    let date=new Date()
+    let hour=date.getHours()
+    hourspan.innerHTML=hour
+    let minutes=date.getMinutes()
+    minutespan.innerHTML=minutes
+    let second=date.getSeconds()
+    secondspan.innerHTML=second
+    if(hour===0){
+        amorpm="AM"
+    }else if (hour >0 && hour<12){
+        amorpm="AM"
+    }else
+{
+    amorpm="PM"
 
-        // Logs to confirm QR code generation starts
-        console.log("Generating QR code for:", website);
-
-        new QRCode(qrcode, website); // Ensure "QRCode" is capitalized correctly
-        document.getElementById('qrcode-container').style.display = "block";
-    } else {
-        alert("Please enter a valid URL");
-        console.log("No URL entered or URL is invalid.");
-    }
 }
 
-
+amorpmspan.textContent=amorpm
+}
+setInterval(ChangeTime,1000)

@@ -1,61 +1,20 @@
 body{
-    background: rgb(200,220,224);
+    background-color:rgba(107,183,218,0.548);
+    padding: 150px;
 }
-.form{
-    max-width: 400px;
-    padding: 16px;
-    background: #fff;
-    font-family: sans-serif;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+.container{
+    height: 130px;
+    width:300px;
+    border:2px groove rgba(118, 239, 248, 0.968);
+    border-radius: 35px;
+    box-shadow: rgb(0,0,0,0.2)0px 10px 20px rgba(0,0,0,0.23)0px 6px 8px;
 }
 h1{
-    background-color: #037737;
-    padding: 20px 0;
-    font-weight: 300;
-    margin: -16px -16px 16px -16px;
-    text-align: center;
-    color: #fff;
-    font-size: 25px;
+    font-style: italic;
+    color: rgb(8,91,100);
+
 }
-.form input[type="text"],.form input[type="url"]{
-    box-sizing: border-box;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4%;
-    border: 1px solid #ccc;
-    padding: 4%;
-    font-size: 17px;
-    color: rgb(9,61,125);
-}
-.form input[type="text"]:focus,.form input[type="url"]:focus{
-    box-shadow: 0 0 5px #5868bf;
-    border:1px solid #5868bf;
-}
-#qrcode-container{
-    display: none;
-}
-button{
-    box-sizing: border-box;
-    width: 180px;
-    margin: 0 auto;
-    padding: 3%;
-    border: none;
-    border-radius: 3px;
-    font-size:17px;
-    background: #0853b6;
-    color: #fff;
-    cursor: pointer;
-}
-.qrcode{
-    padding: 16px;
-    margin-bottom: 30px;
-}
-.qrcode img{
-    margin:0 auto;
-    box-shadow: 0 0 10px rgba(67,67,68,0.25);
-    padding: 4px;
+#clock{
+    font-size: 30px;
+    font-style: sans-serif;
 }
